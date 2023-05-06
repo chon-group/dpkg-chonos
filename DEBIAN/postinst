@@ -82,6 +82,17 @@ echo "Instalação completa. Reinicie o sistema..."
 #https://forum.armbian.com/topic/8663-varlog-on-zram0/
 #Armbian armazena log na memória
 
+# Habilitando log automático do terminal
+cat /etc/rc.local | grep -v "exit 0" | grep -v "/usr/bin/chonos-log -l term &" > /tmp/rc.local
+cat /tmp/rc.local > /etc/rc.local
+echo "/usr/bin/chonos-log -l term &" >> /etc/rc.local
+echo "exit 0" >> /tmp/rc.local
+
+
+
+# Habilitando scan de disco obrigatório do chonOS
+particao=`mount | grep " \/ " | cut -d " " -f 1`
+/usr/sbin/tune2fs -c 1 $particao
 
 # DDNS
 echo "myrobot:ddns_user:ddns_token" > /opt/chonos-embMAS/conf/ddns.conf
