@@ -1,0 +1,92 @@
+#!/bin/bash
+
+#IPv6 Disable
+#https://www.techrepublic.com/article/how-to-disable-ipv6-on-linux/
+cat /etc/sysctl.conf | grep -v disable_ipv6 > /tmp/sysctl.conf
+echo "net.ipv6.conf.all.disable_ipv6 = 1"       >> /tmp/sysctl.conf
+echo "net.ipv6.conf.default.disable_ipv6 = 1"   >> /tmp/sysctl.conf
+echo "net.ipv6.conf.lo.disable_ipv6 = 1"        >> /tmp/sysctl.conf
+mv /tmp/sysctl.conf /etc/sysctl.conf
+
+#Hora do Sistema
+#apt-get install -t bullseye systemd-timesyncd
+echo "[Time]" > /etc/systemd/timesyncd.conf
+echo "NTP=a.st1.ntp.br b.st1.ntp.br c.st1.ntp.br d.st1.ntp.br gps.ntp.br a.ntp.br b.ntp.br c.ntp.b" >> /etc/systemd/timesyncd.conf
+timedatectl set-ntp true
+service systemd-timesyncd restart
+
+#Configuração de Teclado e Hora
+#Desativado devido o chonosUpdate --back
+#dpkg-reconfigure tzdata
+#dpkg-reconfigure keyboard-configuration
+
+
+#Configurando DHCPCD
+echo "###[ChonOS Conf]###" >> /etc/dhcpcd.conf
+echo "profile static_wlan0" >> /etc/dhcpcd.conf
+echo "static ip_address=192.168.168.1/28" >> /etc/dhcpcd.conf
+echo "interface wlan0" >> /etc/dhcpcd.conf
+echo "fallback static_wlan0" >> /etc/dhcpcd.conf
+echo "### Dongle USB Wireless ###" >> /etc/dhcpcd.conf
+echo "#env ifwireless=1" >> /etc/dhcpcd.conf
+echo "#env wpa_supplicant_driver=wext" >> /etc/dhcpcd.conf
+systemctl disable wpa_supplicant
+
+#Configurando DHCPD
+systemctl disable isc-dhcp-server
+systemctl disable networking
+echo "option domain-name \"bot.chon.group\";" > /etc/dhcp/dhcpd.conf
+echo "option domain-name-servers 192.168.168.1;" >> /etc/dhcp/dhcpd.conf
+echo "default-lease-time 600;" >> /etc/dhcp/dhcpd.conf
+echo "max-lease-time 7200;" >> /etc/dhcp/dhcpd.conf
+echo "ddns-update-style none;" >> /etc/dhcp/dhcpd.conf
+echo "subnet 192.168.168.0 netmask 255.255.255.240{" >> /etc/dhcp/dhcpd.conf
+echo "	range 192.168.168.2 192.168.168.14;" >> /etc/dhcp/dhcpd.conf
+echo "	option routers 192.168.168.1;" >> /etc/dhcp/dhcpd.conf
+echo "}" >> /etc/dhcp/dhcpd.conf
+
+echo "INTERFACESv4=\"wlan0\"" > /etc/default/isc-dhcp-server
+
+
+#Configurando Hostname
+echo "myrobot" > /etc/hostname
+
+#Configurando Hostname
+cat /etc/hosts | grep -v "chon.group" | grep -v "168.168.1" | grep -v "localbot" > /tmp/hosts.old
+cat /tmp/hosts.old > /etc/hosts
+#echo "127.168.168.1 local.bot.chon.group" >> /etc/hosts
+
+echo "127.168.168.1	localbot" > /etc/hosts
+echo "192.168.168.1 myrobot myrobot.bot.chon.group" >> /etc/hosts
+
+#Configurando DNSMasq
+#apt install -t bullseye dnsutils bind9-dnsutils dnsmasq
+echo "domain-needed" > /etc/dnsmasq.conf 
+echo "bogus-priv" >> /etc/dnsmasq.conf 
+echo "server=173.255.249.98" >> /etc/dnsmasq.conf 
+systemctl disable dnsmasq
+
+#SSH Root Login
+cat /etc/ssh/sshd_config | grep -v PermitRoot > /tmp/sshd_config
+echo "PermitRootLogin yes" >> /tmp/sshd_config 
+mv /tmp/sshd_config /etc/ssh/sshd_config
+systemctl enable ssh
+echo "root:root" > /tmp/rootlogin
+chpasswd < /tmp/rootlogin
+#passwd -l pi
+
+
+echo "Instalação completa. Reinicie o sistema..."
+
+#OBS:
+#https://forum.armbian.com/topic/8663-varlog-on-zram0/
+#Armbian armazena log na memória
+
+
+# DDNS
+echo "myrobot:ddns_user:ddns_token" > /opt/chonos-embMAS/conf/ddns.conf
+systemctl daemon-reload
+systemctl enable chonos-log.service
+systemctl start  chonos-log.service
+systemctl enable chonos-sysconfig.service
+systemctl start chonos-sysconfig.service

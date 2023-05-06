@@ -1,0 +1,14 @@
+Package: chonos
+Version: 0.5.0
+Priority:
+Architecture: all
+Essential:
+Depends: chonos-log (>= 1.0.0), chonos-task (>= 1.0.0), chonos-ddnsmng (>= 1.0.0), chonos-sysconfig (>= 1.0.0), chonos-network (>= 1.0.0)
+Pre-depends: openssh-server, openssh-sftp-server, systemd-timesyncd
+Suggests:
+Installed-Size:
+Maintainer: chon@grupo.cefet-rj.br
+Conflicts: chonide 
+Replaces:
+Provides:
+Description: Instalador do ChonOS
