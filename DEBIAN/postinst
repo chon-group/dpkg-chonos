@@ -71,12 +71,10 @@ cat /etc/ssh/sshd_config | grep -v PermitRoot > /tmp/sshd_config
 echo "PermitRootLogin yes" >> /tmp/sshd_config 
 mv /tmp/sshd_config /etc/ssh/sshd_config
 systemctl enable ssh
-echo "root:root" > /tmp/rootlogin
-chpasswd < /tmp/rootlogin
+#echo "root:root" > /tmp/rootlogin
+#chpasswd < /tmp/rootlogin
 #passwd -l pi
 
-
-echo "Instalação completa. Reinicie o sistema..."
 
 #OBS:
 #https://forum.armbian.com/topic/8663-varlog-on-zram0/
@@ -88,16 +86,20 @@ cat /tmp/rc.local > /etc/rc.local
 echo "/usr/bin/chonos-log -l term &" >> /etc/rc.local
 echo "exit 0" >> /tmp/rc.local
 
-
-
 # Habilitando scan de disco obrigatório do chonOS
 particao=`mount | grep " \/ " | cut -d " " -f 1`
 /usr/sbin/tune2fs -c 1 $particao
 
 # DDNS
 echo "myrobot:ddns_user:ddns_token" > /opt/chonos-embMAS/conf/ddns.conf
+
 systemctl daemon-reload
 systemctl enable chonos-log.service
 systemctl start  chonos-log.service
 systemctl enable chonos-sysconfig.service
 systemctl start chonos-sysconfig.service
+systemctl enable chonos-network.service
+systemctl start chonos-network.service
+
+
+echo "Instalação completa. Reinicie o sistema..."

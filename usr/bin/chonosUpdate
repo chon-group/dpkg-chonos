@@ -1,6 +1,4 @@
 #! /bin/bash
-EmbedMAS_TMP=/tmp/.embedMAS
-EmbedMAS_LOGFILE=$EmbedMAS_TMP/embeddedMAS.log
 PACOTES="chonos chonos-log chonos-task chonos-ddnsmng chonos-network chonos-firmwaremng chonos-embeddedmas chonos-sysconfig javino"
 
 while getopts a:-: flag
@@ -15,6 +13,6 @@ if [ "$opt" = "" ]; then
     apt install $PACOTES
     exit 0
 elif [ "$opt" = "back" ]; then
-    /usr/bin/chonos-taskNew "apt update >> $EmbedMAS_LOGFILE 2>> $EmbedMAS_LOGFILE; apt install $PACOTES -y >> $EmbedMAS_LOGFILE 2>> $EmbedMAS_LOGFILE"
+    chonos-task -t "apt update; apt install $PACOTES -y"
     exit 0
 fi
