@@ -84,7 +84,8 @@ systemctl enable ssh
 cat /etc/rc.local | grep -v "exit 0" | grep -v "/usr/bin/chonos-log -l term &" > /tmp/rc.local
 cat /tmp/rc.local > /etc/rc.local
 echo "/usr/bin/chonos-log -l term &" >> /etc/rc.local
-echo "exit 0" >> /tmp/rc.local
+echo "exit 0" >> /etc/rc.local
+chmod +x /etc/rc.local
 
 # Habilitando scan de disco obrigatório do chonOS
 particao=`mount | grep " \/ " | cut -d " " -f 1`
