@@ -1,10 +1,10 @@
 Package: chonos
-Version: 1.0.5
+Version: 1.0.6
 Priority:
 Architecture: all
 Essential:
 Depends: chonos-log (>= 1.5.7), chonos-task (>= 1.1.2), chonos-ddnsmng (>= 1.6.1), chonos-sysconfig (>= 1.4.10), chonos-network (>= 1.1.5)
-Pre-depends: openssh-server, openssh-sftp-server, systemd-timesyncd
+Pre-depends: sudo, openssh-server, openssh-sftp-server, systemd-timesyncd
 Suggests:
 Installed-Size:
 Maintainer: chon@grupo.cefet-rj.br
