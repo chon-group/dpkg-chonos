@@ -92,15 +92,25 @@ particao=`mount | grep " \/ " | cut -d " " -f 1`
 /usr/sbin/tune2fs -c 1 $particao
 
 # DDNS
-echo "myrobot:ddns_user:ddns_token" > /opt/chonos-embMAS/conf/ddns.conf
+chonosDDNSManager --conf -d `/usr/bin/hostname` -u "ddns_user" -t "ddns_token"
 
-systemctl daemon-reload
+if [ -d /run/systemd/system ]; then
+    systemctl daemon-reload
+	timedatectl set-ntp true
+	systemctl restart	systemd-timesyncd
+	systemctl restart	chonos-task.service
+	systemctl restart	chonos-log.service
+	systemctl restart	chonos-sysconfig.service
+	systemctl restart	contextNetServer.service
+	systemctl restart	ssh.service
+	systemctl restart 	chonos-ddnsAutoUpdater.service
+	systemctl start		choncloud-boot.service
+fi
+systemctl enable systemd-timesyncd
 systemctl enable chonos-log.service
-systemctl start  chonos-log.service
 systemctl enable chonos-sysconfig.service
-systemctl start chonos-sysconfig.service
-systemctl enable chonos-network.service
-systemctl start chonos-network.service
-
-
-echo "Instalação completa. Reinicie o sistema..."
+systemctl enable chonos-task.service
+systemctl enable contextNetServer.service
+systemctl enable ssh.service
+systemctl enable chonos-ddnsAutoUpdater.service
+systemctl enable choncloud-boot.service

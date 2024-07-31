@@ -1,5 +1,5 @@
 #! /bin/bash
-PACOTES="chonos chonos-cert chonos-ddnsmng chonos-embeddedmas chonos-firmwaremng chonos-log chonos-network chonos-sysconfig chonos-task javino"
+PACOTES="chonos chonos-cert chonos-ddnsmng chonos-embeddedmas chonos-firmwaremng chonos-log chonos-network chonos-sysconfig chonos-task javino jason-embedded"
 
 while getopts a:-: flag
 do
