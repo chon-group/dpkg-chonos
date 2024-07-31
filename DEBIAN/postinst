@@ -101,7 +101,6 @@ if [ -d /run/systemd/system ]; then
 	systemctl restart	chonos-task.service
 	systemctl restart	chonos-log.service
 	systemctl restart	chonos-sysconfig.service
-	systemctl restart	contextNetServer.service
 	systemctl restart	ssh.service
 	systemctl restart 	chonos-ddnsAutoUpdater.service
 	systemctl start		choncloud-boot.service
@@ -110,7 +109,6 @@ systemctl enable systemd-timesyncd
 systemctl enable chonos-log.service
 systemctl enable chonos-sysconfig.service
 systemctl enable chonos-task.service
-systemctl enable contextNetServer.service
 systemctl enable ssh.service
 systemctl enable chonos-ddnsAutoUpdater.service
 systemctl enable choncloud-boot.service
