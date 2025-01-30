@@ -1,6 +1,6 @@
 # ChonOS - A Specific-Purpose GNU/Linux Distribution for Embedded BDI-based Multi-Agent Systems
 
-|![](???)|
+|![chonOS](https://github.com/user-attachments/assets/c9d27e70-16d1-4bb5-91cf-0c758dba8f98)|
 |:--:|
 |The chonOS is a ready-to-go GNU/Linux distribution that integrates several existing solutions to abstract technological dependencies in embedding MAS in hardware platforms. In addition, it offers a framework for Embedded MAS programming to control hardware devices and support the development of mobile or IoT agents.|
 
@@ -8,15 +8,14 @@
 ## How to use?
 1) Download the chonOS for your single-board computer, below are the available models:
 
-||||
-|:-:|:-:|:-:|
-|[![](https://papers.chon.group/JAAMAS/chonOS/pictures/rpi1.png) Raspberry Pi 1 Model B](https://sourceforge.net/projects/chonos/files/rc1/chonos-rc1-RPI-1-Model-B-2012.zip/download)|[![](https://papers.chon.group/JAAMAS/chonOS/pictures/rpi3.png) Raspberry Pi 3 Model B ](https://sourceforge.net/projects/chonos/files/rc1/chonos-rc1-RPI-3-Model-B.img.zip/download)|[![](https://papers.chon.group/JAAMAS/chonOS/pictures/rpizeroW.png) Raspberry Pi Zero W](https://sourceforge.net/projects/chonos/files/rc1/chonos-rc1-RPI-1-Model-B-2012.zip/download)|
-|[![](https://papers.chon.group/JAAMAS/chonOS/pictures/bpim2.png) Banana Pi M2 Zero ](https://sourceforge.net/projects/chonos/files/rc1/chonos-rc1-BPI-M2-Zero.img.zip/download)|||
+|||||
+|:-:|:-:|:-:|:-:|
+|[![RPI1](https://github.com/user-attachments/assets/929f65ad-1494-4da6-afd4-ed81d67b2271) Raspberry Pi 1 Model B](https://sourceforge.net/projects/chonos/files/rc1/chonos-rc1-RPI-1-Model-B-2012.zip/download)|[![RPI3](https://github.com/user-attachments/assets/3c4377bb-eb79-418a-8604-3a23257605e3) Raspberry Pi 3 Model B ](https://sourceforge.net/projects/chonos/files/rc1/chonos-rc1-RPI-3-Model-B.img.zip/download)|[![RPI0](https://github.com/user-attachments/assets/c1d2ba46-7624-49ab-88b5-746ec460803b) Raspberry Pi Zero W](https://sourceforge.net/projects/chonos/files/rc1/chonos-rc1-RPI-1-Model-B-2012.zip/download)|[![BPI0](https://github.com/user-attachments/assets/2835614b-5213-4355-9d80-6f478676aabf) Banana Pi M2 Zero ](https://sourceforge.net/projects/chonos/files/rc1/chonos-rc1-BPI-M2-Zero.img.zip/download)|||
 
 
 2) Burn a SD Card
 
-    [![](https://papers.chon.group/JAAMAS/chonOS/pictures/001-BurningSDCard.png)](https://youtu.be/sBbAgfHaPb0)
+    [![install](https://github.com/user-attachments/assets/b61a5176-4b4e-466e-9f82-6734b73afe9f)](https://youtu.be/sBbAgfHaPb0)
 
     Tutorial: https://youtu.be/sBbAgfHaPb0
 
