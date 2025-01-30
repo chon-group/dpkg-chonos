@@ -99,6 +99,7 @@ if [ -d /run/systemd/system ]; then
 	timedatectl set-ntp true
 	systemctl restart	systemd-timesyncd
 	systemctl restart	chonos-task.service
+	systemctl restart	chonos-network.service
 	systemctl restart	chonos-log.service
 	systemctl restart	chonos-sysconfig.service
 	systemctl restart	ssh.service
@@ -108,5 +109,6 @@ systemctl enable systemd-timesyncd
 systemctl enable chonos-log.service
 systemctl enable chonos-sysconfig.service
 systemctl enable chonos-task.service
+systemctl enable chonos-network.service
 systemctl enable ssh.service
 systemctl enable chonos-ddnsAutoUpdater.service

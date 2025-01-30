@@ -1,5 +1,5 @@
 Package: chonos
-Version: 1.0.8
+Version: 1.0.9
 Priority:
 Architecture: all
 Essential:
@@ -7,8 +7,9 @@ Depends: chonos-log (>= 1.5.8), chonos-task (>= 1.1.2), chonos-ddnsmng (>= 1.6.1
 Pre-depends: sudo, openssh-server, openssh-sftp-server, systemd-timesyncd
 Suggests:
 Installed-Size:
-Maintainer: chon@grupo.cefet-rj.br
+Maintainer: Nilson Lazarin <chon@grupo.cefet-rj.br>
 Conflicts: chonide, choncloud, chonos-lxc-template, chonos-wsl-installer
 Replaces:
 Provides:
-Description: ChonOS meta package
+Homepage: https://github.com/chon-group/dpkg-chonos
+Description: A Specific-Purpose Linux Distribution for Embedded BDI-based Multi-Agent Systems
