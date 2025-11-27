@@ -13,6 +13,7 @@ if [ "$opt" = "" ]; then
     apt install $PACOTES
     exit 0
 elif [ "$opt" = "back" ]; then
-    chonos-task -t "apt update; apt install $PACOTES -y"
+    #chonos-task -t "apt update; apt install $PACOTES -y"
+    # precisa ser revisto quando tem atualização no pacote chonOS, pois reinicia o próprio chonos-task
     exit 0
 fi
