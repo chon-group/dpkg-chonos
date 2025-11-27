@@ -42,7 +42,7 @@ System (chonOS)_](http://os.chon.group/) and is licensed under a <a rel="license
 
 * __Attribution__ — You must give __appropriate credit__ like below:
 
-LAZARIN, Nilson Mori; PANTOJA, Carlos Eduardo; VITERBO, José. Towards a Toolkit for Teaching AI Supported by Robotic-agents: Proposal and First Impressions. In: WORKSHOP SOBRE EDUCAÇÃO EM COMPUTAÇÃO (WEI), 31. , 2023, João Pessoa/PB. Anais [...]. Porto Alegre: Sociedade Brasileira de Computação, 2023 . p. 20-29. ISSN 2595-6175. DOI: https://doi.org/10.5753/wei.2023.229753.
+LAZARIN, Nilson Mori; PANTOJA, Carlos Eduardo; VITERBO, José. Towards a Toolkit for Teaching AI Supported by Robotic-agents: Proposal and First Impressions. In: WORKSHOP ON COMPUTING EDUCATION (WEI), 31. , 2023, João Pessoa/PB. Anais [...]. Porto Alegre: Sociedade Brasileira de Computação, 2023 . p. 20-29. ISSN 2595-6175. DOI: https://doi.org/10.5753/wei.2023.229753.
 
 
 <details>
@@ -51,8 +51,8 @@ LAZARIN, Nilson Mori; PANTOJA, Carlos Eduardo; VITERBO, José. Towards a Toolkit
 ```
 @inproceedings{chonOS,
  author = {Nilson Lazarin and Carlos Pantoja and José Viterbo},
- title = { Towards a Toolkit for Teaching AI Supported by Robotic-agents: Proposal and First Impressions},
- booktitle = {Anais do XXXI Workshop sobre Educação em Computação},
+ title = {Towards a Toolkit for Teaching AI Supported by Robotic-agents: Proposal and First Impressions},
+ booktitle = {Proceedings of the 31st Workshop on Computing Education},
  location = {João Pessoa/PB},
  year = {2023},
  issn = {2595-6175},
