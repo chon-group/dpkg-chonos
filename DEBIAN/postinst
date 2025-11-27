@@ -81,8 +81,12 @@ systemctl enable ssh
 #Armbian armazena log na memória
 
 # Habilitando log automático do terminal
-cat /etc/rc.local | grep -v "exit 0" | grep -v "/usr/bin/chonos-log -l term &" > /tmp/rc.local
-cat /tmp/rc.local > /etc/rc.local
+if [ ! -f /etc/rc.local ]; then
+    echo "#!/bin/sh" > /etc/rc.local
+else
+	cat /etc/rc.local | grep -v "exit 0" | grep -v "/usr/bin/chonos-log -l term &" > /tmp/rc.local
+	cat /tmp/rc.local > /etc/rc.local
+fi
 echo "/usr/bin/chonos-log -l term &" >> /etc/rc.local
 echo "exit 0" >> /etc/rc.local
 chmod +x /etc/rc.local
