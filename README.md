@@ -4,6 +4,19 @@
 |:--:|
 |The chonOS is a ready-to-go GNU/Linux distribution that integrates several existing solutions to abstract technological dependencies in embedding MAS in hardware platforms. In addition, it offers a framework for Embedded MAS programming to control hardware devices and support the development of mobile or IoT agents.|
 
+### ChonOS Services
+|||
+|:-:|:-:|
+|[chonos-embeddedmas](https://github.com/chon-group/dpkg-chonos-embeddedmas)|ChonOS Embedded Multi-agent System Manager.|
+|[chonos-firmwaremng](https://github.com/chon-group/dpkg-chonos-firmwaremng)|ChonOS Firmware Layer Manager.|
+|[chonos-log](https://github.com/chon-group/dpkg-chonos-log)|ChonOS Web Log Monitor.|
+|[chonos-network](https://github.com/chon-group/dpkg-chonos-network)|Implements auto management for IEEE 802.3 and IEEE 802.11 network interfaces.|
+|[chonos-task](https://github.com/chon-group/dpkg-chonos-task)|ChonOS Task Manager (remote management service).|
+|[chonos-sysconfig](https://github.com/chon-group/dpkg-chonos-sysconfig)|The ChonOS SysConfig provides a web interface.|
+|[chonos-ddnsmng](https://github.com/chon-group/dpkg-chonos-ddnsmng)|A client of the Chon DDNS Server.|
+
+
+
 
 ## How to use?
 1) Download the chonOS for your single-board computer, below are the available models:
@@ -20,20 +33,6 @@
     Tutorial: https://youtu.be/sBbAgfHaPb0
 
 
-Other Single-board Computer? Try to execute the follow commands:
-
-```console
-echo "deb [trusted=yes] http://packages.chon.group/ chonos main" | sudo tee /etc/apt/sources.list.d/chonos.list
-sudo apt update
-sudo apt install chonos
-```
-
-
-## How to use?
-
-TODO
-
-
 
 
 ## COPYRIGHT
@@ -45,23 +44,3 @@ System (chonOS)_](http://os.chon.group/) and is licensed under a <a rel="license
 LAZARIN, Nilson Mori; PANTOJA, Carlos Eduardo; VITERBO, José. Towards a Toolkit for Teaching AI Supported by Robotic-agents: Proposal and First Impressions. In: WORKSHOP ON COMPUTING EDUCATION (WEI), 31. , 2023, João Pessoa/PB. Anais [...]. Porto Alegre: Sociedade Brasileira de Computação, 2023 . p. 20-29. ISSN 2595-6175. DOI: https://doi.org/10.5753/wei.2023.229753.
 
 
-<details>
-<summary> Bibtex citation format</summary>
-
-```
-@inproceedings{chonOS,
- author = {Nilson Lazarin and Carlos Pantoja and José Viterbo},
- title = {Towards a Toolkit for Teaching AI Supported by Robotic-agents: Proposal and First Impressions},
- booktitle = {Proceedings of the 31st Workshop on Computing Education},
- location = {João Pessoa/PB},
- year = {2023},
- issn = {2595-6175},
- pages = {20--29},
- publisher = {SBC},
- address = {Porto Alegre, RS, Brasil},
- doi = {10.5753/wei.2023.229753},
- url = {https://sol.sbc.org.br/index.php/wei/article/view/24887}
-}
-
-```
-</details>
