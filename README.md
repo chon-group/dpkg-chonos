@@ -21,9 +21,12 @@
 ## How to use?
 1) Download the chonOS for your single-board computer, below are the available models:
 
-|||||
-|:-:|:-:|:-:|:-:|
-|[![RPI1](https://github.com/user-attachments/assets/929f65ad-1494-4da6-afd4-ed81d67b2271) Raspberry Pi 1 Model B](https://sourceforge.net/projects/chonos/files/rc1/chonos-rc1-RPI-1-Model-B-2012.zip/download)|[![RPI3](https://github.com/user-attachments/assets/3c4377bb-eb79-418a-8604-3a23257605e3) Raspberry Pi 3 Model B ](https://sourceforge.net/projects/chonos/files/rc1/chonos-rc1-RPI-3-Model-B.img.zip/download)|[![RPI0](https://github.com/user-attachments/assets/c1d2ba46-7624-49ab-88b5-746ec460803b) Raspberry Pi Zero W](https://sourceforge.net/projects/chonos/files/rc1/chonos-rc1-RPI-Zero-W.zip/download)|[![BPI0](https://github.com/user-attachments/assets/2835614b-5213-4355-9d80-6f478676aabf) Banana Pi M2 Zero ](https://sourceforge.net/projects/chonos/files/rc1/chonos-rc1-BPI-M2-Zero.img.zip/download)|||
+||||
+|:-:|:-:|:-:|
+|__Version__| __Hardware__ | __Supported Model__ |
+|[chonOS_RPI_armv6l](https://sourceforge.net/projects/chonos/files/rc2/chonOS_RC2_RPI_armv6l.img.xz/download)|Raspberry Pi | Zero W \| 1 B \| 1 B+ |
+|[chonOS_RPI_armhf](https://sourceforge.net/projects/chonos/files/rc2/chonOS_RC2_RPI_armhf.img.xz/download) |Raspberry Pi | 2 B \| 3 B \| 3 B+ |
+|[chonOS_RPI_arm64](https://sourceforge.net/projects/chonos/files/rc2/chonOS_RC2_RPI_arm64.img.xz/download)|Raspberry Pi | Zero 2 W \| 4 \| 5 |
 
 
 2) Burn a SD Card
