@@ -25,8 +25,8 @@
 |:-:|:-:|:-:|
 |__Version__| __Hardware__ | __Supported Model__ |
 |[chonOS_RPI_armv6l](https://sourceforge.net/projects/chonos/files/rc2/chonOS_RC2_RPI_armv6l.img.xz/download)|Raspberry Pi | Zero W \| 1 B \| 1 B+ |
-|[chonOS_RPI_armhf](https://sourceforge.net/projects/chonos/files/rc2/chonOS_RC2_RPI_armhf.img.xz/download) |Raspberry Pi | 2 B \| 3 B \| 3 B+ |
-|[chonOS_RPI_arm64](https://sourceforge.net/projects/chonos/files/rc2/chonOS_RC2_RPI_arm64.img.xz/download)|Raspberry Pi | Zero 2 W \| 4 \| 5 |
+|[chonOS_RPI_armhf](https://sourceforge.net/projects/chonos/files/rc2/chonOS_RC2_RPI_armhf.img.xz/download) |Raspberry Pi | Zero 2 W \| 2 B \| 3 B \| 3 B+ |
+|[chonOS_RPI_arm64](https://sourceforge.net/projects/chonos/files/rc2/chonOS_RC2_RPI_arm64.img.xz/download)|Raspberry Pi |  4 \| 5 |
 
 
 2) Burn a SD Card
