@@ -44,6 +44,7 @@ System (chonOS)_](http://os.chon.group/) and is licensed under a <a rel="license
 
 * __Attribution__ — You must give __appropriate credit__ like below:
 
-LAZARIN, Nilson Mori; PANTOJA, Carlos Eduardo; VITERBO, José. Towards a Toolkit for Teaching AI Supported by Robotic-agents: Proposal and First Impressions. In: WORKSHOP ON COMPUTING EDUCATION (WEI), 31. , 2023, João Pessoa/PB. Anais [...]. Porto Alegre: Sociedade Brasileira de Computação, 2023 . p. 20-29. ISSN 2595-6175. DOI: https://doi.org/10.5753/wei.2023.229753.
+Lazarin, N., Pantoja, C., Viterbo, J. (2026). An Operating-System Infrastructure for Embedded BDI-Based Multi-agent Systems. In: Gervasi, O., et al. Computational Science and Its Applications – ICCSA 2026. ICCSA 2026. Lecture Notes in Computer Science, vol 16769. Springer, Cham. [https://doi.org/10.1007/978-3-032-30494-0_37](https://www.researchgate.net/publication/405508586_An_Operating-System_Infrastructure_for_Embedded_BDI-based_Multi-Agent_Systems)
+
 
 
